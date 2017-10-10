@@ -11,13 +11,14 @@ $(document).ready(readyNow);
  }
 var monthlyCost = 0;
 function appendInfo() {
-  var $tr = $('<tr></tr>');
+  event.preventDefault();
+  var $tr = $('#employee').append('<tr></tr>');
   $tr.append('<td>'+$('#firstName').val()+'</td>');
   $tr.append('<td>'+$('#lastName').val()+'</td>');
   $tr.append('<td>'+$('#title').val()+'</td>');
   $tr.append('<td>'+$('#employeeID').val()+'</td>');
   $tr.append('<td>'+$('#annualSalary').val()+'</td>');
-  $("#employeeInformation").append($tr);
+
   monthlyCost();
 
 }
