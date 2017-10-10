@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="client.js" charset="utf-8"></script>
-    <script src="jquery-3.2.1.min.js" charset="utf-8"></script>
-    <title>WeekendUpgrade</title>
-  </head>
-  <body>
-    <div id="buttonHolder">
-      <button id="submit">Submit</button>
+<head>
+  <meta charset="utf-8">
+  <script src="public/scripts/client.js" charset="utf-8"></script>
+  <script src="public/vendors/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <title>WeekendUpgrade</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Monthly Cost:<span id="monthlyCost"></span></h1>
+    <div id="inputs">
+      <form>
+        <label for="firstName">First Name:</label>
+      <input type="text" id="firstName">
+        <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName">
+        <label for ="Job Title">Job Title:</label>
+      <input type="text" id="title">
+        <lable for="employeeID">Employee ID:</label>
+      <input type="text" id="employeeID">
+        <label for="annualSalary">Annual Salary:</label>
+      <input type="text" id="annualSalary">
+    </form>
     </div>
+    <button id="submit">Submit</button>
     <table id="employeeInformation">
+      <tr></tr>
+    </div>
+  </table>
 
-    </table>
-
-  </body>
+</body>
 </html>
