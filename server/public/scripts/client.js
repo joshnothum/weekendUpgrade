@@ -1,11 +1,11 @@
 $(document).ready(readyNow);
 
- function readyNow() {
+function readyNow() {
    console.log('js sourced');
    clickHandler();
 
  }
- function clickHandler() {
+function clickHandler() {
 
    $('#button').on('click', appendInfo);
 
@@ -13,11 +13,16 @@ $(document).ready(readyNow);
 var monthlyCost = 0;
 
 function appendInfo() {
-event.preventDefault();
-averageMaker();
-console.log(monthlyCost);
 
-var $newInfo = $("<p class = 'info'></p>");
+event.preventDefault();//to prevent autorefresh when using html <form>
+averageMaker();//see below
+var $newInfo = $("<div class= 'info'></p>");
+$("#newInfo").append($newInfo);
+$newInfo.append("<p>"+$('#firstName').val()+"</p>");
+$newInfo.append("<p>" + $('#lastName').val() + "</p>");
+$newInfo.append("<p>" + $('#employeeID').val() + "</p>");
+$newInfo.append("<p>" + $('#annualSalary').val() + "</p>");
+
 $('#monthlyCost').text(monthlyCost);
 
 console.log('help');
@@ -35,7 +40,7 @@ function reset() {
 
  function averageMaker(){
    
-   monthlyCost += parseInt(($('#annualSalary').val())/12);
+   monthlyCost += parseInt(Math.round(($('#annualSalary').val())/12));
    return monthlyCost;
 
  }
