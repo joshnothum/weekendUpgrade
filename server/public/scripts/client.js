@@ -21,10 +21,16 @@ var $newInfo = $("<p class = 'info'></p>");
 $('#monthlyCost').text(monthlyCost);
 
 console.log('help');
+reset();
 
 
 
 
+}
+
+function reset() {
+  $('input').val('');
+ 
 }
 
  function averageMaker(){
