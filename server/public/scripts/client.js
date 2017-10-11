@@ -14,14 +14,14 @@ var monthlyCost = 0;
 
 function appendInfo() {
 
-event.preventDefault();//to prevent autorefresh when using html <form>
+event.preventDefault();//to prevent auto refresh when using html <form>
 averageMaker();//see below
-var $newInfo = $("<div class= 'info'></p>");
+var $newInfo = $("<tr class= 'info'></tr>");
 $("#newInfo").append($newInfo);
-$newInfo.append("<p>"+$('#firstName').val()+"</p>");
-$newInfo.append("<p>" + $('#lastName').val() + "</p>");
-$newInfo.append("<p>" + $('#employeeID').val() + "</p>");
-$newInfo.append("<p>" + $('#annualSalary').val() + "</p>");
+$newInfo.append("<td>" + $('#firstName').val() + "</td>");
+$newInfo.append("<td>" + $('#lastName').val() + "</td>");
+$newInfo.append("<td>" + $('#employeeID').val() + "</td>");
+$newInfo.append("<td>" + $('#annualSalary').val() + "</td>");
 
 $('#monthlyCost').text(monthlyCost);
 
