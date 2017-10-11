@@ -16,12 +16,12 @@ function appendInfo() {
 
 event.preventDefault();//to prevent auto refresh when using html <form>
 averageMaker();//see below
-var $newInfo = $("<tr class= 'info'></tr>");
+var $newInfo = $("<div class= 'info'></div>");
 $("#newInfo").append($newInfo);
-$newInfo.append("<td>" + $('#firstName').val() + "</td>");
-$newInfo.append("<td>" + $('#lastName').val() + "</td>");
-$newInfo.append("<td>" + $('#employeeID').val() + "</td>");
-$newInfo.append("<td>" + $('#annualSalary').val() + "</td>");
+$newInfo.append("<p>" + $('#firstName').val() + "</p>");
+$newInfo.append("<p>" + $('#lastName').val() + "</p>");
+$newInfo.append("<p>" + $('#employeeID').val() + "</p>");
+$newInfo.append("<p>" + $('#annualSalary').val() + "</p>");
 
 $('#monthlyCost').text(monthlyCost);
 
